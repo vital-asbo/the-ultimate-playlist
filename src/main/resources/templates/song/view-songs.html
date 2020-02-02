@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>The Ultimate Playlist</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="#99CC66">
+
+<div class="container">
+
+    <div class="row">
+        <div id="title">
+            <h1>Songs List</h1>
+        </div>
+        <table>
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>Artist</th>
+                <th>Title</th>
+                <th>Album</th>
+                <th>Year</th>
+                <th>Rating</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-th-each="song : ${songList}">
+                <td th:text="${song.id}"></td>
+                <td th:text="${song.artist}"></td>
+                <td th:text="${song.title}"></td>
+                <td th:text="${song.album}"></td>
+                <td th:text="${song.year}"></td>
+               <!-- <td th:text="${song.rating}"></td> -->
+                <td>
+                    <form method="post" th:action="@{/remove-song}"> <!--remove song method mapping-->
+                        <input type="hidden" th:name="song_id" th:value="${song.id}">
+                        <input type="submit" th:value="Delete">
+                    </form>
+                    <form method="post" th:action="@{/edit-song}"> <!--remove song method mapping-->
+                        <input type="hidden" th:name="song_id" th:value="${song.id}">
+                        <input type="submit" th:value="Edit">
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+</body>
+</html>
