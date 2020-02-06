@@ -1,7 +1,10 @@
-package com.theultimateplaylist.demo.songs;
+//package com.theultimateplaylist.demo.songs;
+//
+//public enum SongRating {
+//    NONE, //default
+//    LIKE,
+//    LOVE
+//}
 
-public enum SongRating {
-    NONE, //default
-    LIKE,
-    LOVE
-}
+
+//add later

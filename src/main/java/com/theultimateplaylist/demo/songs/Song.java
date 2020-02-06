@@ -13,7 +13,7 @@ public class Song {
     private String title;
     private String Album;
     private int year;
-    private SongRating songRating;
+    //private SongRating songRating; //add later
 
 
 }

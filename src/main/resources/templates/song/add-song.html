@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a Song</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}" type="text/css">
+</head>
+<body>
+<hr>
+<div class="container">
+    <h2>Add a Song to Playlist</h2>
+    <div class="form-group">
+        <form action="#" th:action="@{/save-song}" th:object="${song}" method="post">
+            <input type="hidden" th:field="*{id}">
+            <input type="text" class="form-control" th:field="*{artist}" placeholder="Artist"><br>
+            <input type="text" class="form-control" th:field="*{title}" placeholder="Title"><br>
+            <input type="text" class="form-control" th:field="*{album}" placeholder="Album"><br>
+            <input type="text" class="form-control" th:field="*{year}" placeholder="Year"><br>
+<!--            <input type="text" th:field="*{rating}" placeholder="Rating"><br>-->
+            <input type="submit" th:value="Save" class="btn btn-dark">
+        </form>
+    </div>
+</div>
+</body>
+</html>
