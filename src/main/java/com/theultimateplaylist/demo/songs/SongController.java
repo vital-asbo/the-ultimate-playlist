@@ -30,9 +30,9 @@ public class SongController {
 //                "Chocolate Starfish and the Hot Dog Flavored Water", 2000, SongRating.LOVE));
 //        songList.add(new Song(3, "Format:B", "Chunky", "Chunky", 2015, SongRating.LIKE));
         songList.add(new Song(1, "Linkin Park", "Numb", "Meteora", 2003));
-        songList.add(new Song(1, "Limp Bizkit", "Rollin'",
+        songList.add(new Song(2, "Limp Bizkit", "Rollin'",
                 "Chocolate Starfish and the Hot Dog Flavored Water", 2000));
-        songList.add(new Song(2, "Format:B", "Chunky", "Chunky", 2015));
+        songList.add(new Song(3, "Format:B", "Chunky", "Chunky", 2015));
         return "song/add-default-playlist";
     }
 
@@ -55,9 +55,9 @@ public class SongController {
 
     @RequestMapping(value = "/save-song")
     public ModelAndView saveSong(@ModelAttribute(value = "song") Song song, BindingResult result) {
+        int index = songList.size();
         if (song.getId() == 0) {
             System.out.println("Adding a New Song");
-            int index = songList.size();
             song.setId(index + 1);
             songList.add(song);
         } else {

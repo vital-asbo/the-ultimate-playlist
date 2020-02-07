@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Adding Default Playlist</title>
-    <link rel="stylesheet" href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}" type="text/css">
-</head>
-<body>
-    <div>
-        <p>Default songs (3) have been added.</p><br>
-        <a href="/view-songs">Click for full playlist</a>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></head>
+
+<body class="p-3 mb-2 bg-dark text-white">
+
+    <div class="container" >
+        <h3 class="text-info">Default songs (3) have been added.</h3><br>
+        <a href="/view-songs" class="btn btn-info">Click for full playlist</a>
+    </div>
+    <div class="container">
+        <br>
+    </div>
+    <div class="container">
+        <a href="/" class="btn btn-primary">Main Page</a><br>
     </div>
 
 </body>
