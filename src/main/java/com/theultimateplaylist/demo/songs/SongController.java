@@ -18,6 +18,9 @@ public class SongController {
 
     List<Song> songList = new ArrayList<>();
 
+//    @Autowired
+//    private SongRepository songRepository;
+
     @RequestMapping("/")
     public String indexGet() {
         return "song/index";
