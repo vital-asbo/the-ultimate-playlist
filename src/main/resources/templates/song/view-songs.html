@@ -5,7 +5,7 @@
     <title>The Ultimate Playlist</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>-->
 </head>
 
 <body class="p-3 mb-2 bg-dark text-white">
@@ -36,7 +36,8 @@
                 <td th:text="${song.title}"></td>
                 <td th:text="${song.album}"></td>
                 <td th:text="${song.year}"></td>
-               <!-- <td th:text="${song.rating}"></td> -->
+                <!-- <td th:text="${song.rating}"></td> -->
+                <!--th:text substituted th":field, because the values were invisible-->
                 <td>
                     <button class="btn btn-group">
                     <form method="post" th:action="@{/remove-song}">
